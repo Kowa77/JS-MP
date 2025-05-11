@@ -6,7 +6,7 @@ document.getElementById("checkout-button").addEventListener("click", async ()=> 
     try {
         const orderData ={
             title: "PELOTITA",
-            quanty: 1,
+            quantity: 1,
             price: 100
         };
 
