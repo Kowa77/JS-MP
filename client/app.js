@@ -58,7 +58,7 @@ const renderComponent = async ( ) =>{
     });
 }
     renderComponent();
-    bricksBuilder.bricks().renderAll();
+    //bricksBuilder.bricks().renderAll();
     console.log("Bricks rendered");
 };
 
