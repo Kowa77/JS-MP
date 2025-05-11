@@ -1,0 +1,69 @@
+const mp = new MercadoPago("YOUR_PUBLIC_KEY", {
+    locale: "es-UY"
+});
+
+document.getElementById("checkout-button").addEventListener("click", async ()=> {
+    try {
+        const orderData ={
+            title: "PELOTITA",
+            quanty: 1,
+            price: 100
+        };
+
+        const response = await fetch("http://localhost:3000/create_preference", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(orderData)
+        });
+
+        const preference = await response.json();
+        console.log(preference);
+        createCheckoutButton(preference.id);
+
+    } catch (error) {
+        alert("Error al crear la preferencia"); 
+        console.error(error);
+    }   
+
+});
+
+const createCheckoutButton = (preferenceId) => {
+const bricksBuilder = mp.bricks();
+
+const renderComponent = async ( ) =>{
+    if(window.checkoutButton) window.checkoutButton.unmount();
+    
+   await bricksBuilder.bricks().create("wallet", "wallet_container", {
+        initialization: {
+            preferenceId: preferenceId
+        },
+        customization: {
+            visual: {
+                theme: "dark",
+                color: "#000000",
+                logo: "https://www.mercadopago.com.uy/fp/checkout/checkout.png"
+            }
+        },
+        callbacks: {
+            onReady: () => {
+                console.log("Bricks initialized");
+            },
+            onError: (error) => {
+                console.error("Error initializing bricks", error);
+            }
+        }
+    });
+}
+    renderComponent();
+    bricksBuilder.bricks().renderAll();
+    console.log("Bricks rendered");
+};
+
+
+
+
+
+
+    
