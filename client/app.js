@@ -2,7 +2,7 @@ const mp = new MercadoPago("APP_USR-31042028-7376-4288-94b4-edd6a94f77c1", {
     locale: "es-UY"
 });
 
-document.getElementById("checkout-button").addEventListener("click", async ()=> {
+document.getElementById("checkout-btn").addEventListener("click", async ()=> {
     try {
         const orderData ={
             title: "PELOTITA",
