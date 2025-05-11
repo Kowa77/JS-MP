@@ -35,7 +35,8 @@ const bricksBuilder = mp.bricks();
 const renderComponent = async ( ) =>{
     if(window.checkoutButton) window.checkoutButton.unmount();
     
-   await bricksBuilder.bricks().create("wallet", "wallet_container", {
+//    await bricksBuilder.bricks().create("wallet", "wallet_container", {
+      await bricksBuilder.create("wallet", "wallet_container", {
         initialization: {
             preferenceId: preferenceId
         },
