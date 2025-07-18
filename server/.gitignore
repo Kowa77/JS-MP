@@ -1,0 +1,36 @@
+# Dependencias de Node
+/node_modules
+
+# Archivos de log
+npm-debug.log*
+.yarn-debug.log*
+.yarn-integrity
+
+# Archivos de build
+/dist
+/build
+/out
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Directorios de IDEs (opcional, si usas alguno de estos)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de pruebas (si no quieres subirlos)
+/coverage
+
+# Archivos de configuración de paquetes (si no quieres subirlos)
+package-lock.json
+yarn.lock
