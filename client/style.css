@@ -1,38 +1,114 @@
-.body{
+body {
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif; /* Using Inter for a modern look */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 20%;
-    height: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-}
-img{
-    max-width: 50%;
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
+    min-height: 100vh; /* Use min-height to ensure it takes full height but can expand */
+    margin: 0;
+    padding: 20px; /* Add some padding around the edges */
+    box-sizing: border-box; /* Include padding in element's total width and height */
 }
 
-button{
-    
-    background-color: #4CAF50;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-product-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 350px; /* Maximum width for larger screens */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transition: transform 0.2s ease-in-out;
+    background-color: #ffffff; /* White background for the card */
+    padding: 20px; /* Add padding inside the card */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+img {
+    max-width: 80%; /* Make image a bit larger within the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 15px auto; /* Add margin below image */
+    border-radius: 8px; /* Slightly rounded corners for image */
+}
+
+.name {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff; /* A more modern blue */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* More rounded corners */
     cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 20%;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 10px; /* Add some space above the button */
+    margin-bottom: 20px; /* Ensure space below for the wallet container */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+#wallet_container {
+    width: 100%; /* Ensure it takes full width of its parent */
+    padding: 10px 0; /* Give it some vertical padding */
+    margin-top: 15px; /* Space above the container */
+    display: flex; /* Use flex to center content inside if needed */
+    justify-content: center; /* Center the MP button horizontally */
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        max-width: 300px; /* Slightly smaller max-width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95%; /* Take more width on very small screens */
+        max-width: none; /* No max-width on tiny screens */
+        padding: 15px;
+    }
+    img {
+        max-width: 90%;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
