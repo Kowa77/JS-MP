@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000; // ¡Este es el cambio importante!
 
 app.use(cors({
-  origin: 'https://js-mp-front.onrender.com' // Replace with your actual Render frontend URL
+  origin: 'https://js-mp-front.onrender.com/' // Replace with your actual Render frontend URL
 }));
 
 app.use(express.json());
