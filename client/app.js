@@ -10,7 +10,7 @@ document.getElementById("checkout-btn").addEventListener("click", async ()=> {
             price: 100
         };
 
-        const response = await fetch("https://servidor-js-mp-production.up.railway.app/create_preference", {
+        const response = await fetch("https://js-mp-api.onrender.com/create_preference", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
