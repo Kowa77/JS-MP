@@ -1,13 +1,13 @@
 body {
     background-color: #f0f0f0;
-    font-family: 'Inter', Arial, sans-serif; /* Using Inter for a modern look */
+    font-family: 'Inter', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Use min-height to ensure it takes full height but can expand */
+    min-height: 100vh;
     margin: 0;
-    padding: 20px; /* Add some padding around the edges */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -26,28 +26,29 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center;
     text-align: center;
-    width: 90%; /* Responsive width */
-    max-width: 350px; /* Maximum width for larger screens */
+    width: 90%;
+    max-width: 350px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
-    background-color: #ffffff; /* White background for the card */
-    padding: 20px; /* Add padding inside the card */
+    background-color: #ffffff;
+    padding: 20px; /* Ya tienes este padding, lo que es bueno */
+    box-sizing: border-box; /* Añadir esto para que el padding no afecte el ancho total */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-5px);
 }
 
 img {
-    max-width: 80%; /* Make image a bit larger within the card */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 80%;
+    height: auto;
     display: block;
-    margin: 0 auto 15px auto; /* Add margin below image */
-    border-radius: 8px; /* Slightly rounded corners for image */
+    margin: 0 auto 15px auto;
+    border-radius: 8px;
 }
 
 .name {
@@ -62,53 +63,38 @@ img {
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #007bff; /* A more modern blue */
+/* El botón de "Comprar" que ya tenías */
+#checkout-btn {
+    background-color: #007bff;
     color: white;
     padding: 12px 25px;
     border: none;
-    border-radius: 8px; /* More rounded corners */
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    margin-top: 10px; /* Add some space above the button */
-    margin-bottom: 20px; /* Ensure space below for the wallet container */
+    margin-top: 10px;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+#checkout-btn:hover {
+    background-color: #0056b3;
     transform: translateY(-2px);
 }
 
+/* Contenedor del botón de Mercado Pago */
 #wallet_container {
-    width: 100%; /* Ensure it takes full width of its parent */
-    padding: 10px 0; /* Give it some vertical padding */
-    margin-top: 15px; /* Space above the container */
-    display: flex; /* Use flex to center content inside if needed */
-    justify-content: center; /* Center the MP button horizontally */
-    align-items: center;
+    /* Aquí están los cambios clave */
+    width: 100%; /* Asegura que tome el 100% del ancho disponible */
+    margin: 15px 0 0 0; /* Un margen superior para separarlo */
+    box-sizing: border-box; /* Crucial para incluir el padding en el ancho */
+    padding: 0 5px; /* Un poco de padding a los lados para que el botón no toque los bordes */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .card {
-        max-width: 300px; /* Slightly smaller max-width for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 95%; /* Take more width on very small screens */
-        max-width: none; /* No max-width on tiny screens */
-        padding: 15px;
-    }
-    img {
-        max-width: 90%;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
+/* Estilos para los elementos que Mercado Pago inserta */
+#wallet_container .mercadopago-button {
+    width: 100%; /* Asegura que el botón de MP se estire al 100% de su contenedor */
+    box-sizing: border-box;
 }
