@@ -98,3 +98,41 @@ img {
     width: 100%; /* Asegura que el botón de MP se estire al 100% de su contenedor */
     box-sizing: border-box;
 }
+.body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+img{
+    max-width: 50%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+button{
+    
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20%;
+}
