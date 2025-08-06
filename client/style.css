@@ -98,3 +98,33 @@ img {
     width: 100%; /* Asegura que el botón de MP se estire al 100% de su contenedor */
     box-sizing: border-box;
 }
+
+
+
+/* Estilos para el contenedor principal del Wallet Brick */
+.svelte-f9trka {
+    width: 100%; /* Aseguramos que ocupe todo el ancho del contenedor padre */
+    box-sizing: border-box; /* Para que el padding no cause desbordamiento */
+    padding: 0 5px; /* Un poco de margen interno para que no pegue a los bordes */
+}
+
+/* Estilos para el botón de Mercado Pago */
+.svelte-iaqav1 {
+    width: 100%; /* Aseguramos que el botón se estire al 100% del ancho */
+    box-sizing: border-box;
+}
+
+/* Estilos para el recuadro azul "Paga de forma segura" */
+.wallet-label-container-2Tl1K6 {
+    /* Aquí están los cambios clave */
+    width: 100%; /* Asegura que la caja tome el ancho completo */
+    margin-top: 10px; /* Le damos un buen margen superior para separarlo del botón */
+    text-align: center; /* Centramos el texto dentro de la caja */
+    box-sizing: border-box;
+}
+
+.wallet-label-container-2Tl1K6 .blue-2eGCEt {
+    font-size: 12px; /* Reducimos el tamaño de la fuente para que quepa */
+    color: #007bff; /* Usamos un color azul consistente */
+    /* Otros estilos si es necesario */
+}
