@@ -9,17 +9,31 @@
 </head>
 <body>
     <div class="container">
-        <div class="card-product-container"> 
+        <div class="card-product-container">
             <div class="card-product">
                 <div class="card">
-                    <img src="https://f.fcdn.app/imgs/200f2f/www.lacancha.uy/lcanuy/6820/webp/catalogo/58789_negro_2/800x800/balon-starlancer-club-unisex-negro.jpg" alt="bananita-pic" />
-                    <h3 class="name">PELOTITA</h3><p class="price">100 $</p>
+                    <!-- Imagen del producto -->
+                    <img src="https://f.fcdn.app/imgs/200f2f/www.lacancha.uy/lcanuy/6820/webp/catalogo/58789_negro_2/800x800/balon-starlancer-club-unisex-negro.jpg" alt="balon-futbol" />
+                    <!-- Nombre del producto -->
+                    <h3 class="name">PELOTITA</h3>
+                    <!-- Precio del producto -->
+                    <p class="price">100 $</p>
+
+                    <!-- Botón inicial para iniciar el proceso de compra -->
                     <button id="checkout-btn">Comprar</button>
-                        <div id="wallet_container"></div>
+
+                    <!-- Contenedor para el mensaje de carga, inicialmente oculto -->
+                    <div id="loading-message" style="display: none;">
+                        <p>Cargando...</p>
+                    </div>
+
+                    <!-- Contenedor donde se renderizará el botón de Mercado Pago (Wallet Brick) -->
+                    <div id="wallet_container"></div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Enlaza tu script JavaScript principal -->
     <script src="app.js"></script>
 </body>
 

@@ -128,3 +128,11 @@ img {
     color: #007bff; /* Usamos un color azul consistente */
     /* Otros estilos si es necesario */
 }
+
+#loading-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
